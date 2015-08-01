@@ -1,0 +1,14 @@
+h2.title { 
+   padding-left: 100px;  
+   height: 40px; 
+   background-color: #FFF;
+   background-image: url(images/genesisdambuster.png);
+   background-repeat: no-repeat;
+   background-position: 10px center; 
+}
+
+.genesis_page_genesis-dambuster-template p.save { width: 100%; text-align: right; }
+.genesis_page_genesis-dambuster-template p.save .button-primary {  margin-right: 20px; }
+.diy-image-feed-widget-item { display: inline-block; vertical-align:top; padding: 10px; }
+.inner-sidebar .diy-image-feed-widget-item { display:block; padding: 5px}
+.diy-image-feed-widget-item div img  { max-height : 240px; width: auto }

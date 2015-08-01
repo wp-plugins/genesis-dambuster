@@ -1,0 +1,40 @@
+/*tabbed metabox */
+
+ul.genesis-dambuster-metabox-tabs { display: inline-block; margin:0 0 -5px; padding: 0; color: #000000;}
+ul.genesis-dambuster-metabox-tabs li {list-style: none; display: inline; font-size: 11px; }
+ul.genesis-dambuster-metabox-tabs li.link { margin-left: 4px; }
+ul.genesis-dambuster-metabox-tabs li.link a { text-decoration: none; }
+ul.genesis-dambuster-metabox-tabs li.link a:hover { text-decoration: underline; }
+ul.genesis-dambuster-metabox-tabs li.tab.hidden { display: none; background-color: gray}
+ul.genesis-dambuster-metabox-tabs li.tab a.has_error { background-color: red; color: white; }
+ul.genesis-dambuster-metabox-tabs li a:focus { outline: none; box-shadow:none; }
+ul.genesis-dambuster-metabox-tabs li.tab a { 
+   display: block; float: left; 
+   margin: 0 4px 1px 0; padding: 5px 12px;
+	font-weight: bold; text-decoration: none; zoom: 1; outline: none;
+	border-radius: 2px 2px 0 0; -webkit-border-radius: 2px 2px 0 0; -moz-border-radius: 2px 2px 0 0; 
+   border-top: 1px solid #88C4E9; border-left: 1px solid #88C4E9; border-right: 1px solid #88C4E9;
+	background-color: #E8E8E8; color: #A8A8A8 ; 
+}
+
+ul.genesis-dambuster-metabox-tabs li a.active,
+ul.genesis-dambuster-metabox-tabs li.tab a:hover { 
+   color: #000000;
+   background-color: #E4F6FD;
+}
+
+.genesis-dambuster-metabox .metabox-content {
+   background: url(images/genesis-club-brand.png) right bottom no-repeat, linear-gradient(to bottom, #E4F6FD,#98CCED); 
+   min-height: 60px;
+   padding-bottom:50px;
+   border: 1px solid #88C4E9;	
+}
+
+.genesis-dambuster-metabox div.tab-content { 
+	padding: 10px 15px; 
+	opacity: 90%;
+}
+
+.genesis-dambuster-metabox .form-table th, .genesis-dambuster-metabox .form-table td {
+   padding: 5px;
+}
