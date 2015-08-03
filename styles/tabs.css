@@ -10,7 +10,7 @@ ul.genesis-dambuster-metabox-tabs li.tab a.has_error { background-color: red; co
 ul.genesis-dambuster-metabox-tabs li a:focus { outline: none; box-shadow:none; }
 ul.genesis-dambuster-metabox-tabs li.tab a { 
    display: block; float: left; 
-   margin: 0 4px 1px 0; padding: 5px 12px;
+   margin: 0 4px 0 0; padding: 5px 12px;
 	font-weight: bold; text-decoration: none; zoom: 1; outline: none;
 	border-radius: 2px 2px 0 0; -webkit-border-radius: 2px 2px 0 0; -moz-border-radius: 2px 2px 0 0; 
    border-top: 1px solid #88C4E9; border-left: 1px solid #88C4E9; border-right: 1px solid #88C4E9;
