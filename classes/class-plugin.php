@@ -43,7 +43,8 @@ class Genesis_Dambuster_Plugin {
    static function get_instance() {
         static $instance = null;
         if (null === $instance) {
-            $instance = new static();
+            // $instance = new static(); //use self instead of static to support 5.2 - not the same but okay as the plugin class is not extended 
+            $instance = new self(); 
         }
         return $instance;
    }
