@@ -57,6 +57,7 @@ class Genesis_Dambuster_Template_Admin extends Genesis_Dambuster_Admin {
 		$this->screen_id = add_submenu_page('genesis', __(GENESIS_DAMBUSTER_FRIENDLY_NAME), $plugin_name,  'manage_options',
 			$this->get_slug(), array($this,'page_content'));
 		add_action('load-'.$this->get_screen_id(), array($this, 'load_page'));
+ 		add_action('admin_enqueue_scripts', array($this, 'register_tooltip_styles'));		
 	}
 
 	function page_content() {
@@ -66,7 +67,6 @@ class Genesis_Dambuster_Template_Admin extends Genesis_Dambuster_Admin {
 
 	function load_page() {
  		if (isset($_POST['options_update'])) $this->save_tweaks();
- 		add_action('admin_enqueue_scripts', array($this, 'register_tooltip_styles'));
 		add_action('admin_enqueue_scripts', array($this, 'register_admin_styles'));
 		$callback_params = array ('options' => $this->template->get_options(false));
 		$this->add_meta_box('intro', 'Introduction',  'intro_panel', $callback_params);

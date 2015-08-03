@@ -4,7 +4,7 @@ Donate link: http://www.diywebmastery.com/donate/
 Tags: genesis plugin, full width templates, beaver builder
 Requires at least: 3.5
 Tested up to: 4.2.3
-Stable tag: 1.1.2
+Stable tag: 1.1.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -49,16 +49,16 @@ The full width setting allows you to have edge-to-edge backgrounds so you can ma
 
 == Changelog ==
 
+* 1.1.3 - Fix loading of CSS for tooltips on Post Editor
 * 1.1.2 - Fix to plugin activation for PHP 5.2
 * 1.1.1 - Added helper classes for clearfix and centering
 * 1.1 - Added CSS tweaks for full width Beaver Builder background videos on small devices
-* 1.0.11 - Added support for Decor, Mindstream, Mocha and Prose
 * For full change history see http://www.genesisdambuster.com/changelog/
 
 
 == Upgrade Notice ==
 
-= 1.1.2 = Fix to plugin activation for PHP 5.2
+= 1.1.3 = Fix loading of CSS for tooltips on Post Editor
 
 == How to Use The Plugin ==
 
