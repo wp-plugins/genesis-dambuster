@@ -1,36 +1,25 @@
 <?php
 class Genesis_Dambuster_Template_Admin extends Genesis_Dambuster_Admin {
     const INDICATOR = 'gcbc_dambuster_template';
-    const ENABLED = 'gcbc_enabled';
-    const REMOVE_EDIT_LINK = 'gcbc_remove_edit_link';
-    const REMOVE_ENTRY_HEADER = 'gcbc_remove_entry_header';
-    const REMOVE_POST_TITLE = 'gcbc_remove_post_title';
-    const REMOVE_BREADCRUMBS = 'gcbc_remove_breadcrumbs';
-    const REMOVE_NAV = 'gcbc_remove_nav';
-    const REMOVE_SUBNAV = 'gcbc_remove_subnav';
-    const REMOVE_HEADER = 'gcbc_remove_header';
-    const REMOVE_FOOTER = 'gcbc_remove_footer';
-    const REMOVE_FOOTER_WIDGETS = 'gcbc_remove_footer_widgets';
-    const FULL_WIDTH = 'gcbc_full_width';
-    const MAX_CONTENT_WIDTH = 'gcbc_max_content_width';
     const CONTENT_PREAMBLE1 = ' <em>If you are NOT using a Page Builder</em> such as Beaver Builder,  you may want to set the values below';
     const CONTENT_PREAMBLE2 = 'These settings just define a helper class called <i>inner</i> which you need to refer to explicitly in the HTML of your page (&lt;div class="inner">Your Content&lt;/div>) on the sections where you want the content in the center rather than edge to edge.';
 
 	private $tips = array(
 			'enabled' => array('heading' => 'Enable Tweaks', 'tip' => 'Click to enable for this page'),
          'remove_header' => array('heading' => 'Remove Header', 'tip' => 'Remove the entire header area'),
-			'remove_primary_navigation' => array('heading' => 'Remove Primary Menu', 'tip' => 'Remove the primary navigation area'),
-			'remove_secondary_navigation' => array('heading' => 'Remove Secondary Menu', 'tip' => 'Remove the secondary navigation area'),
+			'remove_primary_navigation' => array('heading' => 'Remove Primary Nav', 'tip' => 'Remove the primary navigation area'),
+			'remove_secondary_navigation' => array('heading' => 'Remove Secondary Nav', 'tip' => 'Remove the secondary navigation area'),
 			'remove_post_title' => array('heading' => 'Remove Post Title', 'tip' => 'Remove the post title.'),
+			'remove_post_image' => array('heading' => 'Remove Post Image', 'tip' => 'Remove the featured image.'),
 			'remove_entry_header' => array('heading' => 'Remove Entry Header', 'tip' => 'Remove the header  markup around the page title'),
 			'remove_breadcrumbs' => array('heading' => 'Remove Breadcrumbs', 'tip' => 'Remove the Breadcrumbs'),
 			'remove_post_info' => array('heading' => 'Remove Post Info', 'tip' => 'Remove the Post Info (author, date, comments, etc)'),
-			'remove_edit_link' => array('heading' => 'Remove Edit Link', 'tip' => 'Remove the edit link that appears onlu when you are logged in'),
+			'remove_edit_link' => array('heading' => 'Remove Edit Link', 'tip' => 'Remove the edit link that appears only when you are logged in'),
 			'remove_post_meta' => array('heading' => 'Remove Post Meta', 'tip' => 'Remove the Post Meta (categories, tags, etc)'),
 			'remove_entry_footer' => array('heading' => 'Remove Entry Footer', 'tip' => 'Remove the footer markup arounf the post meta'),
 			'remove_author_box' => array('heading' => 'Remove Author Box', 'tip' => 'Remove the Author Box'),
 			'remove_comments' => array('heading' => 'Remove Comments', 'tip' => 'Remove the comments section'),
-			'remove_after_entry' => array('heading' => 'Remove After Entry Widget', 'tip' => 'Remove the After Entry Widget Area'),
+			'remove_after_entry' => array('heading' => 'Remove After Entry', 'tip' => 'Remove the After Entry Widget Area'),
 			'remove_footer_widgets' => array('heading' => 'Remove Footer Widgets', 'tip' => 'Remove any footer widgets'),
 			'remove_footer' => array('heading' => 'Remove Footer', 'tip' => 'Remove any footer section'),
 			'remove_background' => array('heading' => 'Remove Background', 'tip' => 'Remove any custom background color or image'),
@@ -202,6 +191,7 @@ class Genesis_Dambuster_Template_Admin extends Genesis_Dambuster_Admin {
 	   return
          $this->meta_form_field($meta, 'remove_breadcrumbs', 'checkbox').
          $this->meta_form_field($meta, 'remove_post_title', 'checkbox').
+         $this->meta_form_field($meta, 'remove_post_image', 'checkbox').
          $this->meta_form_field($meta, 'remove_entry_header', 'checkbox').
          $this->meta_form_field($meta, 'remove_post_info', 'checkbox').
          $this->meta_form_field($meta, 'remove_edit_link', 'checkbox');
@@ -211,6 +201,7 @@ class Genesis_Dambuster_Template_Admin extends Genesis_Dambuster_Admin {
       return  
          $this->fetch_form_field('remove_breadcrumbs', $options['remove_breadcrumbs'], 'checkbox').
          $this->fetch_form_field('remove_post_title', $options['remove_post_title'], 'checkbox').
+         $this->fetch_form_field('remove_post_image', $options['remove_post_image'], 'checkbox').
          $this->fetch_form_field('remove_entry_header', $options['remove_entry_header'], 'checkbox').
          $this->fetch_form_field('remove_post_info', $options['remove_post_info'], 'checkbox').
          $this->fetch_form_field('remove_edit_link', $options['remove_edit_link'], 'checkbox');
