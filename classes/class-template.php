@@ -10,6 +10,7 @@ class Genesis_Dambuster_Template {
 		'remove_secondary_navigation' => false,
 		'remove_entry_header' => false,
 		'remove_post_title' => false,
+		'remove_post_image' => false,
 		'remove_breadcrumbs' => false,
 		'remove_edit_link' => false,
 		'remove_post_info' => false,
@@ -79,6 +80,7 @@ class Genesis_Dambuster_Template {
 			if ($this->post_options['remove_secondary_navigation']) $this->remove_secondary_navigation();
 			if ($this->post_options['remove_entry_header']) $this->remove_entry_header();
 			if ($this->post_options['remove_post_title']) $this->remove_post_title();
+			if ($this->post_options['remove_post_image']) $this->remove_post_image();
 			if ($this->post_options['remove_post_info']) $this->remove_post_info();
 			if ($this->post_options['remove_edit_link']) $this->remove_edit_link();
 			if ($this->post_options['remove_breadcrumbs']) $this->remove_breadcrumbs();
@@ -107,6 +109,7 @@ class Genesis_Dambuster_Template {
 	  remove_action( 'genesis_header', 'genesis_do_nav' ); 
 	  remove_action( 'genesis_header', 'genesis_do_nav', 5 );
 	  remove_action( 'genesis_header', 'genesis_do_nav', 12 );
+	  remove_action( 'genesis_header', 'genesis_do_nav', 14 );
 	  remove_action( 'genesis_after_header', 'genesis_do_nav' ); 
 	  remove_action( 'genesis_before_content_sidebar_wrap', 'genesis_do_nav' );        
      do_action('genesis_dambuster_remove_primary_navigation', $this->post_id);
@@ -115,6 +118,7 @@ class Genesis_Dambuster_Template {
 	function remove_secondary_navigation() {
 	  remove_action( 'genesis_before_header', 'genesis_do_subnav' );        
 	  remove_action( 'genesis_header', 'genesis_do_subnav' ); 
+	  remove_action( 'genesis_header', 'genesis_do_subnav', 6 ); 
 	  remove_action( 'genesis_after_header', 'genesis_do_subnav' ); 
 	  remove_action( 'genesis_footer', 'genesis_do_subnav', 7 );
      do_action('genesis_dambuster_remove_secondary_navigation', $this->post_id);
@@ -130,6 +134,14 @@ class Genesis_Dambuster_Template {
    function remove_post_title() {
       remove_action( $this->is_html5 ? 'genesis_entry_header' : 'genesis_post_title', 'genesis_do_post_title' ); // Remove Title    
       do_action('genesis_dambuster_remove_post_title', $this->post_id);
+   }
+
+   function remove_post_image() {
+      if ($this->is_html5 )
+         remove_action( 'genesis_entry_content', 'genesis_do_post_image' , 8); 
+      else 
+         remove_action( 'genesis_post_content', 'genesis_do_post_image' ); 
+      do_action('genesis_dambuster_remove_post_image', $this->post_id);
    }
 
    function remove_post_info() {
